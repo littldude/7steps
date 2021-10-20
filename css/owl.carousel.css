@@ -1,14 +1,13 @@
-
 .owl-carousel {
 	display: none;
-	width: 1222px !important;
+	width: 100%;
 	-webkit-tap-highlight-color: transparent;
 	/* position relative and z-index fix webkit rendering fonts issue */
 	position: relative;
 	z-index: 1;
 }
 .owl-carousel .owl-stage {
-	padding: 0 0 73px 0;
+	padding: 70px 0 16px 0;
 	position: relative;
 	-ms-touch-action: pan-Y;
 	touch-action: manipulation;
@@ -26,6 +25,8 @@
 .owl-carousel .owl-stage-outer {
 	position: relative;
 	overflow: hidden;
+	width: 900px;
+	margin: 0 auto;
 	/* fix for flashing background */
 	-webkit-transform: translate3d(0px, 0px, 0px);
 }
@@ -47,18 +48,12 @@
 	-webkit-touch-callout: none;
 }
 .owl-item {
-	display: flex !important;
-	flex-direction: row;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-left: 40px !important;
-	margin-right: -3px !important;
+	width: 280px !important;
 }
-/* .owl-item .active{
-	margin-right: 40px !important;
-	margin-left: 40px !important;
-} */
-
 .owl-carousel .owl-item img {
 	display: block;
 	width: 100%;
@@ -86,20 +81,12 @@
 	justify-content: center;
 	color: inherit;
 	border: none;
-	border-radius: 10px;
-	width: 109px;
-	height: 46px;
+	border-radius: 100%;
+	width: 56px;
+	height: 56px;
 	padding: 0 !important;
 	font: inherit;
-	background: #DBD1C5;
-}
-.owl-carousel .owl-nav button.owl-prev:hover {
-	background: #AB7051;
-	transition: .2s linear;
-}
-.owl-carousel .owl-nav button.owl-next:hover {
-	background: #AB7051;
-	transition: .2s linear;
+	background-color: #65B07A;
 }
 .owl-carousel.owl-loaded {
 	display: block;
@@ -174,7 +161,10 @@
  */
 
 .owl-carousel .owl-item {
-	width: 1180px !important;
+	/**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */
 }
 .owl-carousel .owl-item .owl-lazy {
 	opacity: 0;
@@ -190,43 +180,76 @@
 
 .owl-prev {
 	position:absolute;
-	bottom: 0;
-	left: 40%;
-	width: 109px;
-	height: 46px;
+	top:50%;
+	left:-10px;
+	width:30px;
+	height:30px;
 	margin-top:-15px;
 	line-height:30px;
-	background: #DBD1C5;
-}
-.owl-prev .disabled {
-	background-color: #672424 !important;
+	color:#fff;
 }
 .owl-next {
 	position:absolute;
-	bottom: 0;
-	right: 40%;
-	width: 109px;
-	height: 46px;;
-	margin-top: -15px;
-	line-height: 30px;
-	background: #DBD1C5;
+	top:50%;
+	right:-10px;
+	width:30px;
+	height:30px;
+	margin-top:-15px;
+	line-height:30px;
+	color:#fff;
 }
 .owl-dots {
 	display: none;
 }
-/* @media (max-width: 1366px) {
+@media (max-width: 1140px) {
+	.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
+	width: 45px;
+	height: 45px;
+}
+	
+}
+@media (max-width: 991px) {
 	.owl-prev {
-		left: 2%;
+		left: 0;
 	}
 	.owl-next {
-		right: 2%;
+		right: 0;
+	}
+	.owl-carousel .owl-stage-outer {
+		width: 90%;
 	}
 }
-@media (max-width: 1220px) {
-	.owl-carousel {
-		width: 1180px !important
-	}
-	.owl-item {
-		margin-left: 30px !important;
+/* @media (max-width: 768px) {
+	.owl-carousel .owl-nav button.owl-prev,
+	.owl-carousel .owl-nav button.owl-next,
+	.owl-carousel button.owl-dot {
+		width: 30px;
+		height: 30px;
 	}
 } */
+@media (max-width: 568px) {
+	.owl-item {
+		width: 290px !important;
+	}
+	.owl-prev {
+		top: auto;
+		left: auto;
+		bottom: -25px;
+		right: 55%;
+	}
+	.owl-next {
+		top: auto;
+		bottom: -25px;
+		left: 55%;
+	}
+	.owl-carousel .owl-stage {
+		padding: 50px 0 16px 0;
+	}
+}
+@media (max-width: 414px) {
+	.owl-carousel .owl-stage-outer {
+		width: 100%;
+	}
+}
