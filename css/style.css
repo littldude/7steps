@@ -148,6 +148,10 @@ button:focus {
   margin: 20px auto;
   color: #ffffff;
 }
+.text--inf {
+  width: 600px;
+  margin: 0 auto;
+}
 
 .underline {
   position: relative;
@@ -641,7 +645,6 @@ button:focus {
     width: 70%;
     margin-bottom: 180px;
     padding: 60px 30px 30px 30px;
-    text-align: center;
   }
   .program__inner--item:nth-child(2n) {
     margin: 0 0 180px 0;
