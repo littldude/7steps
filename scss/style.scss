@@ -2,34 +2,6 @@ $pink: #C57198;
 $green: #A4E2B5;
 $dark: #181818;
 $brown: #3E151E;
-// @font-face {
-//     font-family: 'Montserrat';
-//     font-style: normal;
-//     font-weight: 500;
-//     src: url('../fonts/Montserrat-Medium.woff');
-//     font-display: swap;
-// }
-// @font-face {
-//     font-family: 'Montserrat';
-//     font-style: italic;
-//     font-weight: 500;
-//     src: url('../fonts/Montserrat-MediumItalic.woff');
-//     font-display: swap;
-// }
-// @font-face {
-//     font-family: 'Montserrat';
-//     font-style: normal;
-//     font-weight: 700;
-//     src: url('../fonts/Montserrat-SemiBold.woff');
-//     font-display: swap;
-// }
-// @font-face {
-//     font-family: 'Montserrat';
-//     font-style: normal;
-//     font-weight: 800;
-//     src: url('../fonts/Montserrat-ExtraBold.woff');
-//     font-display: swap;
-// }
 
 *,
 ::after,
@@ -201,7 +173,6 @@ button:focus {
     width: 306px;
     height: 70px;
     border-radius: 20px;
-    padding: 23px 0;
     text-align: center;
     color: #ffffff;
     font-size: 18px;
@@ -216,7 +187,6 @@ button:focus {
     &--program {
         width: 430px;
         margin: 0 auto;
-        padding: 0;
         svg {
             display: flex;
             flex: 0 0 auto;
@@ -827,6 +797,9 @@ button:focus {
         &--bggreen {
             font-size: 18px;
         }
+        &--buy {
+            width: auto;
+        }
     }
     .underline {
         &--intro {
@@ -953,11 +926,32 @@ button:focus {
         width: 290px;
         font-size: 16px;
         line-height: 20px;
-        padding: 25px 0;
         &--buy {
             width: 100%;
         }
+        &--program {
+            position: relative;
+            &::before {
+                content: '';
+                background-image: url('../img/white-check.svg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                display: flex;
+                flex: 0 0 auto;
+                width: 18px;
+                height: 14px;
+                position: absolute;
+                top: 18px;
+                left: 30px;
+            }
+            svg {
+                display: none;
+            }
+        }
     }
+    
+
+
     .intro {
         padding: 20px 0 40px 0;
         &__img {

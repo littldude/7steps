@@ -178,7 +178,6 @@ button:focus {
   width: 306px;
   height: 70px;
   border-radius: 20px;
-  padding: 23px 0;
   text-align: center;
   color: #ffffff;
   font-size: 18px;
@@ -194,7 +193,6 @@ button:focus {
 .button--program {
   width: 430px;
   margin: 0 auto;
-  padding: 0;
 }
 .button--program svg {
   display: flex;
@@ -766,6 +764,9 @@ button:focus {
   .text--bggreen {
     font-size: 18px;
   }
+  .text--buy {
+    width: auto;
+  }
 
   .underline--intro::before {
     width: 290px;
@@ -882,10 +883,28 @@ button:focus {
     width: 290px;
     font-size: 16px;
     line-height: 20px;
-    padding: 25px 0;
   }
   .button--buy {
     width: 100%;
+  }
+  .button--program {
+    position: relative;
+  }
+  .button--program::before {
+    content: "";
+    background-image: url("../img/white-check.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex: 0 0 auto;
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    top: 18px;
+    left: 30px;
+  }
+  .button--program svg {
+    display: none;
   }
 
   .intro {
