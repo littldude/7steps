@@ -723,6 +723,11 @@ button:focus {
             width: auto;
         }
     }
+    .text {
+        &--inf {
+            width: 90%;
+        }
+    }
     .button {
         &--buy {
             width: 90%;
@@ -800,6 +805,9 @@ button:focus {
         }
         &--buy {
             width: auto;
+        }
+        &--inf {
+            width: 100%;
         }
     }
     .underline {
