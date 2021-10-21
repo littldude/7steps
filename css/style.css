@@ -177,7 +177,7 @@ button:focus {
   position: relative;
 }
 .underline--intro {
-  display: inline;
+  display: inline-block;
 }
 .underline--intro::before {
   position: absolute;

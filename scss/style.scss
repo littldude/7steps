@@ -169,7 +169,7 @@ button:focus {
 .underline {
     position: relative;
     &--intro {
-        display: inline;
+        display: inline-block;
         &::before {
             position: absolute;
             content: '';
